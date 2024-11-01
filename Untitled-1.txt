@@ -1,0 +1,142 @@
+/* Flex container for LeftInfo (text) and RightInfo (image/button) */
+#home {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: static;
+    overflow-x: hidden;
+}
+
+/* Navbar wrapper with a rectangle box */
+.Navbar {
+    background-color: #010526; /* Background color of the rectangle */
+    height: 91px;
+    width: 100%; /* Full width of the screen */
+    display: flex;
+    justify-content: space-between; /* Space between Portfolio (left) and list (right) */
+    align-items: center;
+    padding: 0 20px; /* Padding inside the navbar for spacing */
+    box-sizing: border-box; /* Make sure padding doesn't overflow */
+}
+
+/* Rectangle box styling */
+.box {
+    height: 91px;
+    width: 1920px; /* Width of the rectangle container */
+    background-color: #010526; /* Adjust color as needed */
+    display: flex;
+    justify-content: space-between; /* To keep "Portfolio" left and "list" right */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Portfolio title on the left */
+.Navbar h3 {
+    color: #ffffff; /* White text color */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navbar list on the right */
+.list {
+    display: flex;
+    gap: 30px; /* Space between each navigation link */
+}
+
+.list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.list a:hover {
+    color: #FFD700; /* Change color to yellow on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .Navbar {
+        flex-direction: column;
+        height: auto; /* Let it adjust automatically based on content */
+        padding: 10px 0;
+    }
+
+    .list {
+        margin-top: 10px;
+        gap: 20px; /* Smaller gap for mobile */
+    }
+}
+
+/* Left Side - Text Information */
+.LeftInfo {
+    flex: 1; /* Allows it to take available space on the left */
+    color: var(--text-color);
+    text-align: left;
+}
+
+.LeftInfo h1 {
+    font-size: 4rem; /* Size of the main name text */
+    color: var(--text-color);
+}
+
+.LeftInfo h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Right Side - Image and Resume Button */
+.RightInfo {
+    display: flex;
+    flex-direction: column; /* Stack the image, theme icon, and button vertically */
+    align-items: center; /* Center the content */
+    margin-left: 20px; /* Space between the text and image */
+}
+
+.MyPicture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Make the image circular */
+    border: 4px solid #FFD700; /* Add a border around the image */
+    margin-bottom: 20px;
+}
+
+.Theme {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Space between the theme icon and the button */
+}
+
+.downloadButton {
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.downloadButton:hover {
+    background-color: #33FF33; /* Lighter green on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .RightInfo {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

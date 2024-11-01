@@ -1,0 +1,49 @@
+import React from 'react';
+import styles from './Experience.module.css'; // Assuming you're using CSS modules
+
+function Experience() {
+  const activities = [
+    {
+      date: "Sept 2022 - May 2024",
+      title: "Alpha Phi Omega",
+      roles: "Web Master, Pledge Retreat Chair, Design Chair, Sargent at Arms, Jacket Designer",
+    },
+    {
+      date: "Jan 2021 - Sept 2022",
+      title: "Inter-Club Council",
+      roles: "PRAC Committee Chair, Commissioner of Activities",
+    },
+    {
+      date: "Jan 2021 - Sept 2022",
+      title: "Women In Computer Science",
+      roles: "Activity Coordinator",
+    },
+    {
+      date: "Dec 2019 - Jan 2020",
+      title: "CISV International",
+      roles: "Singaporean Ambassador",
+    },
+    {
+      date: "June 2015 - Dec 2019",
+      title: "Superteens / Smartkids Bootcamp",
+      roles: "Alumni",
+    },
+  ];
+
+  return (
+    <div className={styles.experienceContainer}>
+      <h2 className={styles.title}>Activities</h2>
+      <div className={styles.activitiesList}>
+        {activities.map((activity, index) => (
+          <div key={index} className={styles.activityCard}>
+            <p className={styles.date}>{activity.date}</p>
+            <h3 className={styles.activityTitle}>{activity.title}</h3>
+            <p className={styles.roles}>{activity.roles}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Experience;

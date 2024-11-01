@@ -1,0 +1,102 @@
+/* Main section styling */
+.ContactSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    color: #ffffff;
+}
+
+/* Contact card styling */
+.ContactCard {
+    width: 90%;              /* Makes the card take up 90% of the container width */
+    max-width: 600px;        /* Ensures it doesn’t get larger than 600px */
+    padding: 40px;
+    background-color: #000535;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;          /* Centers the card horizontally */
+}
+
+/* Header styling */
+.ContactCard h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+
+}
+
+.SocialIcons {
+    display: flex;
+    gap: 15px; /* Space between each icon */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.IconImage {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.IconImage:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Form styling */
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Top row styling to place Name and Email side by side */
+.TopRow {
+    display: flex;
+    gap: 20px;
+}
+
+/* Each input group */
+.InputGroup {
+    flex: 1;
+}
+
+.InputGroup input,
+.InputGroup textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    font-size: 16px;
+    font-family: 'K2D';
+}
+
+/* Placeholder styling */
+.InputGroup input::placeholder,
+.InputGroup textarea::placeholder,
+.InputGroup textarea::placeholder {
+    color: #bbb;
+    font-size: 16px;
+    text-align: left; /* Align Name and Email placeholders to the left */
+}
+
+
+
+/* Styling for Send button */
+.SendButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.SendButton:hover {
+    background-color: #01880a;
+    border-color: #01880a;
+}

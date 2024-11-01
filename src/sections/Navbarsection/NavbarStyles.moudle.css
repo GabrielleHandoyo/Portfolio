@@ -1,0 +1,65 @@
+/* Base Styles for Desktop */
+/* .Navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #0b0d30;;
+    display: flex;
+    flex-direction: row;
+  } */
+  .Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust padding as needed */
+    background-color: var(--navbar-color);
+    height: 60px; /* Adjust height as needed */
+    font-family: 'Just Another Hand';
+    font-size: 30px;
+    width: 100%; /* Ensures navbar stretches across full width */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+
+  }
+  
+  .Navbar h3 {
+    margin: 0;
+    color: var(--portfolio-color);
+    font-size: 40px;
+  }
+  
+  .list {
+    display: flex;
+    gap: 20px; /* Space between links */
+  }
+  
+  .list a {
+    text-decoration: none;
+    color: #ffffff; /* Link color */
+    font-weight: bold;
+  }
+
+  .list a:hover {
+    color: var(--portfolio-color); /* Change link color on hover */
+  }
+
+  .Info {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    min-height: calc(100vh - 60px); /* Full screen height minus navbar height */
+    border: 60px; /* Adds margin equal to the navbar's height */
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+
+  /* Media query for mobile devices */
+@media (max-width: 455px) {
+  .Navbar h3 {
+    display: none; /* Hides the h3 on small screens */
+  }
+
+  .list {
+    justify-content: center; /* Optionally center the list on small screens */
+    gap: 10px; /* Space between links */
+  }
+}

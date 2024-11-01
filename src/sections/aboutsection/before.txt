@@ -1,0 +1,142 @@
+import React from 'react'
+import styles from "./AboutStyles.module.css";
+import UCD from "../../assets/UCDavisCow.gif";
+import ArtandTech from "../../assets/image2.png";
+import Language from "../../assets/image3.png";
+
+function about() {
+    return (
+
+        <section id="about" className={styles.AboutMe}>
+
+            <h3>About me</h3>
+
+            <div className={styles.AboutMe_01}>
+                <p className={styles.AboutTextContainer}>
+                    I graduated from
+                    <span className={styles.BoldColoredText}> UC Davis </span>
+                    with a bachelor’s degree in
+                    <span className={styles.BoldColoredText}> Computer Science</span>.
+                    <br />
+                    My unique artistic perspective enhances my ability to solve problems creatively, <br />
+                    while my coding skills enable me to turn those ideas into reality. I enjoy <br />
+                    designing websites, creating games, and developing software, combining my <br />
+                    passion for both art and technology.
+                </p>
+
+
+                <img
+                    className={styles.UCDavisPic}
+                    src={UCD}
+                    alt="Cow with UC DAVIS on it"
+                />
+            </div>
+
+            <div className={styles.AboutMe_02}>
+                <img
+                    className={styles.ArtandTechPic}
+                    src={ArtandTech}
+                    alt="ArtandTech in a picture"
+                />
+                <p className={styles.AboutTextContainer}>
+                    I’m passionate about blending
+                    <span className={styles.BoldColoredText}> art and technology </span>
+                    to create unique <br />
+                    and innovative solutions.  Whether it’s through design or code, I <br />
+                    tackle challenges with
+                    <span className={styles.BoldColoredText}> creativity</span>
+                    , always striving to push <br />
+                    boundaries and transform concepts from sketches into fully <br />
+                    realized products.
+                </p>
+            </div>
+
+            <div className={styles.AboutMe_03}>
+                <p className={styles.AboutTextContainer}>
+                    My primary programming language is
+                    <span className={styles.BoldColoredText}> C++</span>
+                    , followed by Java, C, and Python. <br />
+                    I also have experience with HTML, JavaScript, CSS, Node.js, React.js, <br />
+                    and more. I am proficient in using various IDEs, including Visual  <br />
+                    Studio Code and Eclipse.
+                </p>
+                <img
+                    className={styles.LanguagePic}
+                    src={Language}
+                    alt="Coding language"
+                />
+            </div>
+
+        </section>
+
+
+
+    )
+}
+
+export default about
+/* Main container for the 'About' section */
+.AboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
+}
+
+/* Plain heading positioned at the top left */
+.AboutMe h3 {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 0px;
+    text-align: left;
+}
+
+/* Section containers with text in a rectangle and image outside */
+.AboutMe_01,
+.AboutMe_02,
+.AboutMe_03 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/* Rectangle for text */
+.AboutMe_01 .AboutTextContainer,
+.AboutMe_02 .AboutTextContainer,
+.AboutMe_03 .AboutTextContainer {
+    flex: 1;
+    padding: 20px;
+    background: var(--boxed-color);
+    border: 4px solid var(--border-color); /* Customize the color */
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/* Styling for images outside the rectangle */
+.UCDavisPic,
+.ArtandTechPic,
+.LanguagePic {
+    max-width: 30dvh;
+    margin-right: 20px; /* Space between image and rectangle */
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .AboutMe_01, .AboutMe_02, .AboutMe_03 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .UCDavisPic,
+    .ArtandTechPic,
+    .LanguagePic {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

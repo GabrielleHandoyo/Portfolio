@@ -1,0 +1,65 @@
+/* Main container for the 'About' section */
+.AboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Plain heading positioned at the top left */
+.AboutMe h3 {
+    font-size: 60px;
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+/* Section containers with text in a rectangle and image outside */
+.AboutMe_01,
+.AboutMe_02,
+.AboutMe_03 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Rectangle for text */
+.AboutMe_01 .AboutTextContainer,
+.AboutMe_02 .AboutTextContainer,
+.AboutMe_03 .AboutTextContainer {
+    flex: 1;
+    padding: 20px;
+    background: var(--boxed-color);
+    border: 5px solid var(--border-color); /* Customize the color */
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/* Styling for images outside the rectangle */
+.UCDavisPic,
+.ArtandTechPic,
+.LanguagePic {
+    max-width: 30dvh;
+    margin-right: 20px; /* Space between image and rectangle */
+    border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .AboutMe_01, .AboutMe_02, .AboutMe_03 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .UCDavisPic,
+    .ArtandTechPic,
+    .LanguagePic {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

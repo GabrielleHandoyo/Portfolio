@@ -1,0 +1,90 @@
+:root {
+  --background-color: #000117f7;
+  --btn-color: #025307; /* Default dark theme */
+  --btn-text-color: #fff;
+  --text-color: #fff;
+  --title-color: #FCB83B;
+  --navbar-color: hsl(234, 96%, 11%);
+  --portfolio-color: #FCB83B;
+  --boxed-color:#041154;
+  --border-color: #0B269B;
+}
+
+[data-theme="light"] {
+  --background-color: #FFDDE8;
+  --btn-color: #89CEFF; /* Light theme color */
+  --text-color: #B70074;
+  --title-color: #7D6FFF;
+  --navbar-color: #FFAAEA;
+  --portfolio-color: #FFE101;
+  --boxed-color:#FFAFE2;
+  --border-color: #F327FE;
+}
+
+/* General Reset */
+* { 
+  font-synthesis: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color); /* Uses theme variable */
+  justify-content: center;
+  margin: 0 auto 60px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+
+h1,
+h2,
+h3,
+p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  font-family: 'Just Another Hand';
+}
+
+h1 {
+  color: var(--title-color);
+  font-size: 80px;
+  line-height: 1.1;
+}
+
+h2,
+p {
+  font-family: 'K2D';
+}
+
+h2,
+h3 {
+  font-size: 22px;
+}
+
+button {
+  font-family: 'K2D';
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: var(--btn-color); /* Button color from theme */
+  color: var(--btn-text-color); /* Button text color from theme */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #33FF33;
+}
+html {
+  scroll-behavior: smooth;
+}
