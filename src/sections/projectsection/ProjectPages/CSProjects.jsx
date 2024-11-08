@@ -19,7 +19,7 @@ const projects = [
         tech: 'HTML, JS, CSS, React.js',
         context: 'Built My own Personal Website',
         githubLink: 'https://github.com/GabrielleHandoyo/Portfolio',
-        projectLink: '',
+        projectLink: 'https://gabriellehandoyo.netlify.app',
         image: PortfolioImage // Replace with actual image path
     }
 ];
