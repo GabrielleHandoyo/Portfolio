@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ArtProjectsStyles.module.css';
+import FigmaPortfolio from "../../../assets/FigmaPortfolio.png";
+import InstagramBorder_1 from "../../../assets/InstagramBorder_1.png";
+import dragon from "../../../assets/dragon.png";
+
+const projects = [
+    {
+        title: "Jacket Embroidery",
+        image: dragon,
+        description: "Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter",
+    },
+    {
+        title: "Instagram Border",
+        image: InstagramBorder_1,
+        description: "Designed the Alpha Phi Omega S2K23 Iota Phi Chapter Instagram Border",
+    },
+    {
+        title: "Figma Personal Website",
+        image: FigmaPortfolio,
+        description: "Designed my Personal Website on Figma",
+    }
+];
 
 function ArtProjects() {
+    const [modalImage, setModalImage] = useState(null);
+
+    const openModal = (image) => setModalImage(image);
+    const closeModal = () => setModalImage(null);
+
     return (
         <div className={styles.container}>
-            {/* Navigation and Title in the same row */}
             <div className={styles.nav}>
                 <div className={styles.leftLink}>
                     <Link to="/other-projects" className={styles.navButton}>
@@ -22,34 +47,32 @@ function ArtProjects() {
                         <span className={styles.arrow}>→</span>
                     </Link>
                 </div>
-
             </div>
 
-            {/* Project cards */}
             <div className={styles.projectsGrid}>
-                <div className={styles.projectCard}>
-                    <div className={styles.imagePlaceholder}>
-                        <p className={styles.description}>Detailed description of Jacket Embroidery.</p>
+                {projects.map((project, index) => (
+                    <div key={index} className={styles.projectCard}>
+                        <div className={styles.imagePlaceholder} onClick={() => project.image && openModal(project.image)}>
+                            {project.image ? (
+                                <img src={project.image} alt={`${project.title} preview`} className={styles.projectImage} />
+                            ) : null}
+                            <p className={styles.description}>{project.description}</p>
+                        </div>
+                        <h2 className={styles.projectTitle}>{project.title}</h2>
                     </div>
-                    <h2 className={styles.projectTitle}>Jacket Embroidery</h2>
-                </div>
-                <div className={styles.projectCard}>
-                    <div className={styles.imagePlaceholder}>
-                        <p className={styles.description}>Detailed description of Instagram Border.</p>
-                    </div>
-                    <h2 className={styles.projectTitle}>Instagram Border</h2>
-                </div>
-                <div className={styles.projectCard}>
-                    <div className={styles.imagePlaceholder}>
-                        <p className={styles.description}>Detailed description of Personal Website.</p>
-                    </div>
-                    <h2 className={styles.projectTitle}>Personal Website</h2>
-                </div>
-
+                ))}
             </div>
 
-            {/* Back button */}
             <Link to="/#project" className={styles.backButton}>⬅ Back</Link>
+
+            {modalImage && (
+                <div className={styles.modal} onClick={closeModal}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <img src={modalImage} alt="Enlarged preview" className={styles.modalImage} />
+                        <button className={styles.closeButton} onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

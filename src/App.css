@@ -21,7 +21,9 @@
 
   --projectTitle-color: #ffffff;
   --project-color: #FCB83B;
+
   --projectText-color:#FCB83B;
+  --projectHeading-color:#FCB83B;
 }
 
 [data-theme="light"] {

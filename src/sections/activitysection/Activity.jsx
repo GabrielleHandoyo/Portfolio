@@ -11,7 +11,7 @@ function Activities() {
                 <p className={styles.Role}>
                     <span className={styles.Yellowed}>Alpha Phi Omega </span>
                     | Web Master, Pledge Retreat Chair, Design Chair, Sargent at Arms, Jacket Designer
-                    <a href="#" className={styles.LinkIcon}>&#x2197;</a>
+                    <a href="https://www.iotaphi.org" className={styles.LinkIcon}>&#x2197;</a>
                 </p>
                 <div className={styles.Tags}>
                     <span>HTML</span>
@@ -29,7 +29,7 @@ function Activities() {
                 <p className={styles.Role}>
                     <span className={styles.Yellowed}>Inter-Club Council </span>
                     | PRAC Committee Chair, Commissioner of Activities
-                    <a href="#" className={styles.LinkIcon}>&#x2197;</a>
+                    <a href="https://www.dvc.edu/student-services/student-life/inter-club-council/index.html" className={styles.LinkIcon}>&#x2197;</a>
                 </p>
                 <div className={styles.Tags}>
                     <span>Leadership</span>
@@ -42,7 +42,7 @@ function Activities() {
                 <p className={styles.Role}>
                     <span className={styles.Yellowed}>Women In Computer Science </span>
                     | Activity Coordinator
-                    <a href="#" className={styles.LinkIcon}>&#x2197;</a>
+                    <a href="https://wicsdvc.com" className={styles.LinkIcon}>&#x2197;</a>
                 </p>
                 <div className={styles.Tags}>
                     <span>Python</span>
@@ -57,7 +57,7 @@ function Activities() {
                 <p className={styles.Role}>
                     <span className={styles.Yellowed}>CISV International </span>
                     | Singaporean Ambassador
-                    <a href="#" className={styles.LinkIcon}>&#x2197;</a>
+                    <a href="https://cisv.org" className={styles.LinkIcon}>&#x2197;</a>
                 </p>
                 <div className={styles.Tags}>
                     <span>Leadership</span>
@@ -71,7 +71,7 @@ function Activities() {
                 <p className={styles.Role}>
                     <span className={styles.Yellowed}>Superteens/Smartkids Bootcamp </span>
                     | Almuni
-                    <a href="#" className={styles.LinkIcon}>&#x2197;</a>
+                    <a href="https://www.instagram.com/superteen.id/" className={styles.LinkIcon}>&#x2197;</a>
                 </p>
                 <div className={styles.Tags}>
                     <span>Leadership</span>

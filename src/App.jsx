@@ -8,8 +8,8 @@ import Activity from "./sections/activitysection/Activity";
 import Experience from "./sections/expsection/Experience";
 
 import ArtProjects from "./sections/projectsection/projectpages/ArtProjects";
-import CSProjects from './sections/projectsection/ProjectPages/CSProjects';
-import OtherProjects from './sections/projectsection/ProjectPages/OtherProjects';
+import CSProjects from './sections/projectsection/projectpages/CSProjects';
+import OtherProjects from './sections/projectsection/projectpages/OtherProjects';
 
 function App() {
   return (

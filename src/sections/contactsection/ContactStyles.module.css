@@ -91,16 +91,22 @@
 
 /* Styling for Send button */
 .SendButton {
-    padding: 10px 20px;
+    width: 100%; /* Ensures the button is the same width as the textarea */
+    padding: 10px 0; /* Adjust vertical padding for a consistent height */
     font-size: 16px;
     color: var(--contact-color);
     background-color: transparent;
     border: 1px solid var(--contact-color);
     cursor: pointer;
+    margin-top: 20px;
     transition: background-color 0.3s ease;
 }
 
+.ResultMessage {
 
+    color: green; /* Or red if there’s an error */
+    font-weight: bold;
+}
 
 
 
@@ -121,7 +127,9 @@
         font-size: 15px; /* Further reduce font size for very small screens */
         padding: 10px; /* Compact padding for mobile view */
     }
+
 }
+
 
 
 @media (max-width: 1000px) {
@@ -132,7 +140,6 @@
     }
 
     .ContactCard h3 {
-        font-size: 65px;
         position: absolute;
         top: -180px; /* Position the heading above the social icons */
         left: 50%;
@@ -156,5 +163,17 @@
     .SendButton {
         font-size: 14px;
     }
+}
+
+@media (max-width: 500px) {
+
+
+    .ContactCard h3{
+        top: -260px;
+    }
+    .ContactCard {
+        margin-top: 180px;
+    }
+
 }
 

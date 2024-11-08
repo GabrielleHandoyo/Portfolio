@@ -21,14 +21,14 @@ function Project() {
             <div className={styles.ProjectContainer}>
 
                 <div className={styles.ProjectCard}>
-                    <a href=""></a>
+                    <a href="https://www.instagram.com/p/CnvKpqRuwcq/"></a>
                     <img className={styles.ProjectImages} src={dragon} alt="Dragon Drawing" />
 
 
                     <div className={styles.textAlign}>
                         <h3>Dragon Design</h3>
                         <p>
-                            For Embroidery
+                            Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter
                         </p>
 
                         <Link to="/art-projects">
@@ -39,14 +39,14 @@ function Project() {
                 </div>
 
                 <div className={styles.ProjectCard}>
-                    <a href=""></a>
+                    <a href="https://jpsingh10.github.io/ECS162-p2/arcade/index.html"></a>
                     <img className={styles.ProjectImages} src={rabbit} alt="Rabbit Drawing" />
 
                     <div className={styles.textAlign}>
 
                         <h3>Run Rabbit Run</h3>
                         <p>
-                            Arcade Game
+                            Built a web arcade game for my school project with a partner
                         </p>
 
                         <Link to="/cs-projects">
@@ -59,14 +59,14 @@ function Project() {
                 </div>
 
                 <div className={styles.ProjectCard}>
-                    <a href=""></a>
+                    <a href="https://youtu.be/JHHs3b37fTQ?si=Js0fgC44MqE6tmlC"></a>
                     <img className={styles.ProjectImages} src={valorant} alt="Valorant Thumbnail" />
 
                     <div className={styles.textAlign}>
 
                         <h3>Valorant Montage</h3>
                         <p>
-                            Video edit of valorant clips
+                            Wanted to capture moments in my valorant games, so I learned how to video edit
                         </p>
 
                         <Link to="/other-projects">

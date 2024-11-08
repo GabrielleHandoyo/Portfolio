@@ -44,7 +44,7 @@
     box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     box-sizing: border-box;
-    margin: 4vw;
+    margin: 2.5vw;
     font-size: 25px;
 }
 
@@ -57,7 +57,7 @@
 .UCDavisPic,
 .ArtandTechPic,
 .LanguagePic {
-    max-width: 250px;
+    max-width: 300px;
     border-radius: 50%;
 }
 
@@ -78,7 +78,7 @@
     .UCDavisPic,
     .ArtandTechPic,
     .LanguagePic {
-    max-width: 25vw;
+    max-width: 27vw;
 
 }
 

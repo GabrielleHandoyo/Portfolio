@@ -118,11 +118,26 @@ html, body {
 .imagePlaceholder {
     width: 100%;
     height: 300px;
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.3);
     margin-bottom: 10px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.imagePlaceholder:hover .projectImage {
+    transform: scale(1.2); /* Enlarges the image on hover */
+}
+
+
+
+
 
 .description {
     opacity: 0;
@@ -146,6 +161,54 @@ html, body {
     font-size: 25px;
     font-weight: bold;
     margin: 0;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.modalImage {
+    width: 100%; /* Ensures the image scales to fill the modal content */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.closeButton:hover {
+    background-color: #555;
 }
 
 
@@ -180,5 +243,9 @@ html, body {
     .projectsGrid {
         flex-direction: column;
         align-items: center;
+    }
+
+    .modalContent {
+        width: 90vw;
     }
 }

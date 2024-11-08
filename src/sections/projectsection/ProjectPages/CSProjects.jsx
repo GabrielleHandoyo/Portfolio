@@ -1,24 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './CSProjectsStyles.module.css';
+import rabbit from "../../../assets/RunRabbitRun.png";
+import PortfolioImage from "../../../assets/PortfolioImage.png";
+
 
 const projects = [
     {
         title: 'Kids Arcade',
-        tech: 'HTML/JS/CSS',
-        context: 'CONTEXT'
+        tech: 'HTML, JS, CSS',
+        context: 'Built a web arcade game for my school project with a partner',
+        githubLink: 'https://github.com/jpsingh10/ECS162-p2',
+        projectLink: 'https://jpsingh10.github.io/ECS162-p2/arcade/index.html',
+        image: rabbit
     },
     {
-        title: 'Personal Portfolio',
-        tech: 'NODE.js, React.js',
-        context: 'CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT CONTEXT'
+        title: 'Personal Portfolio Website',
+        tech: 'HTML, JS, CSS, React.js',
+        context: 'Built My own Personal Website',
+        githubLink: 'https://github.com/GabrielleHandoyo/Portfolio',
+        projectLink: '',
+        image: PortfolioImage // Replace with actual image path
     }
 ];
 
 export default function CSProjects() {
     return (
         <div className={styles.container}>
-            {/* Navigation and Title in the same row */}
             <div className={styles.nav}>
                 <div className={styles.leftLink}>
                     <Link to="/art-projects" className={styles.navButton}>
@@ -37,11 +45,20 @@ export default function CSProjects() {
                 </div>
             </div>
 
-            {/* Project cards */}
             <div className={styles.projectsGrid}>
                 {projects.map((project, index) => (
                     <div key={index} className={styles.projectCard}>
-                        <div className={styles.imagePlaceholder}></div>
+                        <div className={styles.imagePlaceholder}>
+                            <img src={project.image} alt={`${project.title} preview`} className={styles.projectImage} />
+                            <div className={styles.buttonContainer}>
+                                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={styles.button}>
+                                    GitHub
+                                </a>
+                                <a href={project.projectLink} target="_blank" rel="noopener noreferrer" className={styles.button}>
+                                    View Project
+                                </a>
+                            </div>
+                        </div>
                         <div className={styles.projectInfo}>
                             <h2 className={styles.projectTitle}>{project.title} || {project.tech}</h2>
                             <p className={styles.projectContext}>{project.context}</p>
@@ -50,7 +67,6 @@ export default function CSProjects() {
                 ))}
             </div>
 
-            {/* Back button */}
             <Link to="/#project" className={styles.backButton}>⬅ Back</Link>
         </div>
     );
