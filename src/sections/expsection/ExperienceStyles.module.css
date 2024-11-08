@@ -4,26 +4,29 @@
     align-items: center;
     color: #fff;
     padding: 40px;
-    font-family: 'K2D', sans-serif;
     gap: 20px;
+        
+    min-height: 100vh; /* Ensures the section takes at least the full screen height */
+    justify-content: center; /* Center content vertically if it's smaller than the viewport */
+    box-sizing: border-box; /* Ensures padding is included in the height */
 
 }
 
 .heading {
-    font-size: 2.5rem;
+    font-size: 65px;
     margin-bottom: 10px;
+    color: var(--title-color);
 }
 
 .subheading {
-    font-size: 1.25rem;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .cardsContainer {
     display: grid;
     gap: 20px;
     justify-content: center;
+    margin: 4vw;
 }
 
 /* Full-width on larger screens */
@@ -40,9 +43,7 @@
     }
 }
 
-/* Single-column layout on small screens */
-/* Single-column layout on small screens */
-@media (max-width: 400px) {
+@media (max-width: 550px) {
     .cardsContainer {
         grid-template-columns: 1fr;
     }
@@ -55,46 +56,50 @@
     /* Show merged card */
     .mergedCard {
         display: block;
-        background-color: #00115a;
-        border: 2px solid #1a74ff;
+        background: var(--boxed-color);
+        border: 4px solid var(--border-color); /* Customize the color */
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
-        padding: 20px;
+        padding: 20px 100px;
         text-align: center;
     }
 }
 
 .card {
-    background-color: #00115a;
-    border: 2px solid #1a74ff;
+    background: var(--boxed-color);
+    border: 4px solid var(--border-color); /* Customize the color */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
+    font-size: 40px;
     color: #ffa500;
     margin-bottom: 10px;
 }
 
-.cardDetails {
-    font-size: 1rem;
-}
+/* .cardDetails {
+
+} */
 
 .languagesContainer {
-    margin-top: 30px;
+    margin-top: 5px;
     padding: 20px;
-    background-color: #00115a;
+    background: var(--boxed-color);
+    border: 4px solid var(--border-color); /* Customize the color */
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    width: 80%;
+    width: 90%;
     max-width: 700px;
     text-align: center;
 }
 
 .languagesHeading {
-    font-size: 1.5rem;
+    font-size: 40px;
     color: #ffa500;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .languagesList {
@@ -108,5 +113,5 @@
 
 .languagesList li {
     font-size: 1rem;
-    color: #fff;
+    color: var(--text-color);
 }

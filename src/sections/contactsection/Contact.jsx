@@ -7,6 +7,7 @@ import github from "../../assets/Github.png";
 
 
 function Contact() {
+
     return (
         <section id="contact" className={styles.ContactSection}>
             <div className={styles.ContactCard}>
@@ -41,6 +42,12 @@ function Contact() {
                     <button className={styles.SendButton}>Send</button>
                 </div>
             </div>
+
+            <footer className={styles.Footer}>
+                <p className={styles.FooterText}>© 2024 Gabrielle Handoyo. All rights reserved.</p>
+            </footer>
+
+
         </section>
     );
 }

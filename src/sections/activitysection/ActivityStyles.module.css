@@ -4,12 +4,19 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+        
+    min-height: 100vh; /* Ensures the section takes at least the full screen height */
+    justify-content: center; /* Center content vertically if it's smaller than the viewport */
+    box-sizing: border-box; /* Ensures padding is included in the height */
 }
 
 /* Header styling */
-.ActivitySection h3 {
-    font-size: 36px;
-    margin-bottom: 20px;
+
+.heading {
+    font-size: 65px;
+    margin-bottom: 10px;
+    color: var(--title-color);
+
     text-align: center;
 }
 
@@ -29,21 +36,21 @@
 
 /* Date styling */
 .Date {
-    font-size: 18px;
+    font-size: 25px;
     color: #FCB83B;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 /* Role and link icon styling */
-.Role {
-    font-size: 15px;
-    color: #ddd;
-}
+/* .Role {
+} */
 
 .LinkIcon {
     color: #f4a261;
     margin-left: 5px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Tag container styling */
@@ -56,11 +63,10 @@
 
 .Tags span {
     display: inline-block;
-    background-color: #3b57d0;
+    background-color: var(--activityTag-color);
     color: white;
     border-radius: 12px;
     padding: 4px 8px;
-    font-size: 12px;
     font-family: 'K2D';
 }
 
@@ -71,14 +77,15 @@
         padding: 15px;
         margin: 10px 20px; /* Adds extra margin on all sides */
         text-align: center;
-        background-color: #041154;
-        border: 4px solid #0B269B;
+        background: var(--boxed-color);
+        border: 4px solid var(--border-color); /* Customize the color */
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     }
 
     .Date, .Role, .Tags {
         text-align: center;
+        justify-content: center;
     }
 }
 

@@ -3,22 +3,51 @@
   --btn-color: #025307; /* Default dark theme */
   --btn-text-color: #fff;
   --text-color: #fff;
+
   --title-color: #FCB83B;
+
+
   --navbar-color: hsl(234, 96%, 11%);
   --portfolio-color: #FCB83B;
+
+
   --boxed-color:#041154;
   --border-color: #0B269B;
+
+
+  --activityTag-color: rgb(26, 67, 252);
+
+  --contact-color: #ffffff;
+
+  --projectTitle-color: #ffffff;
+  --project-color: #FCB83B;
+  --projectText-color:#FCB83B;
 }
 
 [data-theme="light"] {
-  --background-color: #FFDDE8;
-  --btn-color: #89CEFF; /* Light theme color */
-  --text-color: #B70074;
-  --title-color: #7D6FFF;
-  --navbar-color: #FFAAEA;
+  --background-color: #BFEEFF;
+  --btn-color: #53BDFF; /* Light theme color */
+  --text-color: #7A7A7A;
+  
+
+  --title-color: #346EFF;
+
+
   --portfolio-color: #FFE101;
-  --boxed-color:#FFAFE2;
-  --border-color: #F327FE;
+  --navbar-color: rgba(255, 255, 255, 0.4);
+
+
+  --boxed-color:rgba(255, 255, 255, 0.3);
+  --border-color: rgba(255, 255, 255, 0.7);
+
+
+  --activityTag-color: hsl(202, 100%, 74%);
+
+  --contact-color: #01003f;
+  
+  --projectTitle-color: #0120ce;
+  --project-color: #1c99ff;
+  --projectHeading-color:#4607bb;
 }
 
 /* General Reset */
@@ -26,6 +55,12 @@
   font-synthesis: none;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 body {
@@ -56,18 +91,18 @@ h1, h3 {
 
 h1 {
   color: var(--title-color);
-  font-size: 80px;
+  font-size: 125px;
   line-height: 1.1;
 }
 
 h2,
 p {
   font-family: 'K2D';
+  font-size: 20px;
 }
 
-h2,
 h3 {
-  font-size: 22px;
+  font-size: 65px;
 }
 
 button {
@@ -83,7 +118,7 @@ button {
   transition: background-color 0.3s ease;
 }
 button:hover {
-  background-color: #33FF33;
+  background-color: #003ad8;
 }
 html {
   scroll-behavior: smooth;

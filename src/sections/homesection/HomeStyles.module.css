@@ -1,3 +1,30 @@
+.homesection {
+      
+  min-height: 100vh; /* Ensures the section takes at least the full screen height */
+  justify-content: center; /* Center content vertically if it's smaller than the viewport */
+  box-sizing: border-box; /* Ensures padding is included in the height */
+}
+
+/* CSS for the Scroll-to-Top Button */
+.scrollUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0px 20px 20px;
+  font-size: 50px;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1000; /* Set a high z-index value */
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+}
+
+
 
 /* Base Styles for Desktop */
 /* .Navbar {
@@ -34,7 +61,7 @@
   
   .list a {
     text-decoration: none;
-    color: #ffffff; /* Link color */
+    color: var(--text-color);
     font-weight: bold;
   }
 
@@ -42,28 +69,29 @@
     color: var(--portfolio-color); /* Change link color on hover */
   }
 
-  .Info {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    min-height: calc(100vh - 60px); /* Full screen height minus navbar height */
-    border: 60px; /* Adds margin equal to the navbar's height */
-    text-align: center;
-    box-sizing: border-box;
-  }
-
 
   /* Media query for mobile devices */
-@media (max-width: 455px) {
+@media (max-width: 550px) {
+  .Navbar {
+    justify-content: center;
+  }
   .Navbar h3 {
     display: none; /* Hides the h3 on small screens */
   }
 
   .list {
     justify-content: center; /* Optionally center the list on small screens */
+    align-items: center;
     gap: 10px; /* Space between links */
+    font-size: 25px;
   }
 }
+
+
+
+
+
+
 .ThemeChanger {
   position: absolute;
   top: 45px;
@@ -88,42 +116,103 @@
   transition: opacity 0.3s ease-in-out; /* Smooth transition for hiding */
 }
 
-/* Info section */
-.Info {
+
+
+
+/* Container for main content */
+.MainContent {
+  display: flex;
+  min-height: calc(100vh - 100px); /* Full screen height minus navbar height */
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 8vw;
+  width: 100%;
+  margin: 0 auto; /* Center the content */
+}
+
+/* Left Side - Text Content */
+.TextContent {
+  flex: 1;
+  text-align: left;
+  padding-left: 10vw;
+}
+
+.Hello {
+  font-size: 35px;
+}
+
+.LastName {
+  padding-left: 5vw;
+  padding-bottom: 2vw;
+}
+
+/* Right Side - Image and Button */
+.ImageContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  margin: 20px auto;
+  flex: 1;
 }
 
 .MyPicture {
-  max-width: 300px; /* Adjust for larger screens */
+  max-width: 420px;
   width: 100%;
   height: auto;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  
+  
 }
 
 .downloadButton {
-  margin-top: 10px;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* For smaller screens */
+/* For Smaller Screens */
 @media (max-width: 768px) {
-  .Info {
-    flex-direction: column; /* Stack all elements vertically */
+  .ThemePointer {
+    opacity: 0; /* Make it invisible */
+    pointer-events: none; /* Prevent interaction when invisible */
+  }
+
+  .Hello {
+    margin-top: 15vh;
+  }
+
+  .FirstName, .LastName {
+    font-size: 80px;
+    padding-left: 0vw;
+  }
+
+  .MainContent {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .TextContent, .ImageContent {
+    text-align: center; 
+    padding-left: 0px;
   }
 
   .MyPicture {
-    max-width: 200px; /* Adjust image size for smaller screens */
+    max-width: 300px; /* Smaller image size for mobile */
   }
 
   .downloadButton {
     width: 100%;
     max-width: 200px;
-    margin-top: 10px; /* Ensure space between elements */
+    margin-top: 10px;
+    margin-bottom: 150px;
   }
 }
+
+
+
+
+
+

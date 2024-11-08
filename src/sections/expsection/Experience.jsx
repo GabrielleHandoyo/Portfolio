@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react';
 import styles from './ExperienceStyles.module.css';
 
 function Experience() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 550);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 400);
+        const handleResize = () => setIsMobile(window.innerWidth <= 550);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
-        <div className={styles.experienceContainer}>
-            <h2 className={styles.heading}>Experience</h2>
+        <section id="experience" className={styles.experienceContainer}>
+            <h3 className={styles.heading}>Experience</h3>
             <p className={styles.subheading}>
                 Here are some key aspects of computer science I’ve gained through my experience as a student in the field.
             </p>
@@ -73,7 +73,7 @@ function Experience() {
                     <li>Golang/Lisp/Prolog ★★☆☆☆</li>
                 </ul>
             </div>
-        </div>
+        </section>
     );
 }
 

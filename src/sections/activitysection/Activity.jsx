@@ -3,8 +3,8 @@ import styles from './ActivityStyles.module.css';
 
 function Activities() {
     return (
-        <section className={styles.ActivitySection}>
-            <h3>Activities</h3>
+        <section id="activities" className={styles.ActivitySection}>
+            <h3 className={styles.heading}>Activities</h3>
 
             <div className={styles.ActivityEntry}>
                 <p className={styles.Date}>Sept 2022 - May 2024</p>

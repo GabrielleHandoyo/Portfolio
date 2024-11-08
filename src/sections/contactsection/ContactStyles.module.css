@@ -1,27 +1,30 @@
 /* Main section styling */
 .ContactSection {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
-    color: #ffffff;
+    justify-content: center;
+    min-height: 100vh; /* Ensures the section takes the full screen height */
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 120px; /* Adds space for the footer */
 }
 
 /* Contact card styling */
 .ContactCard {
-    width: 90%;              /* Makes the card take up 90% of the container width */
-    max-width: 600px;        /* Ensures it doesn’t get larger than 600px */
+    width: 50%;
     padding: 40px;
-    background-color: #000535;
+    background: var(--boxed-color);
+    border: 4px solid var(--border-color);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;          /* Centers the card horizontally */
+    margin: 0 auto;
 }
-
 /* Header styling */
 .ContactCard h3 {
-    font-size: 50px;
+    font-size: 65px;
+    color: var(--title-color);
     margin-bottom: 20px;
 
 }
@@ -66,11 +69,12 @@
     width: 100%;
     padding: 10px 0;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--contact-color);
     background-color: transparent;
-    color: #ffffff;
+    color: var(--contact-color);
     outline: none;
     font-size: 16px;
+    resize: none;
     font-family: 'K2D';
 }
 
@@ -78,7 +82,7 @@
 .InputGroup input::placeholder,
 .InputGroup textarea::placeholder,
 .InputGroup textarea::placeholder {
-    color: #bbb;
+    color: var(--contact-color);
     font-size: 16px;
     text-align: left; /* Align Name and Email placeholders to the left */
 }
@@ -89,14 +93,68 @@
 .SendButton {
     padding: 10px 20px;
     font-size: 16px;
-    color: #ffffff;
+    color: var(--contact-color);
     background-color: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid var(--contact-color);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.SendButton:hover {
-    background-color: #01880a;
-    border-color: #01880a;
+
+
+
+
+.Footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--navbar-color);
+    padding: 20px;
+    opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+    .FooterText {
+        font-size: 15px; /* Further reduce font size for very small screens */
+        padding: 10px; /* Compact padding for mobile view */
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .ContactCard {
+        width: 70%;
+        padding: 20px;
+        position: relative;
+    }
+
+    .ContactCard h3 {
+        font-size: 65px;
+        position: absolute;
+        top: -180px; /* Position the heading above the social icons */
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--title-color);
+    }
+
+    .SocialIcons {
+        position: absolute;
+        top: -80px; /* Position the social icons below the heading */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+
+    .TopRow {
+        flex-direction: column;
+    }
+
+    .SendButton {
+        font-size: 14px;
+    }
+}
+
