@@ -135,6 +135,18 @@ html, body {
     transform: scale(1.2); /* Enlarges the image on hover */
 }
 
+.linkArrow {
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.linkArrow:hover {
+    color: #fcb83b; /* Highlight color on hover */
+}
+
 
 
 

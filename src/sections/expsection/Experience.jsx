@@ -42,13 +42,13 @@ function Experience() {
                         <div className={styles.card}>
                             <h3 className={styles.cardTitle}>Web Programming</h3>
                             <p className={styles.cardDetails}>
-                                Focused on front-end and back-end development, covering modern frameworks, client-server interactions, and responsive design.
+                                Focused on front-end development, creating responsive designs and user-friendly interfaces with modern frameworks.
                             </p>
                         </div>
                         <div className={styles.card}>
                             <h3 className={styles.cardTitle}>Parallel Architecture</h3>
                             <p className={styles.cardDetails}>
-                                Explored the design and analysis of parallel computing architectures.
+                                Studied parallel computing architectures, including design and analysis techniques for optimized performance.
                             </p>
                         </div>
                         <div className={styles.card}>
@@ -65,12 +65,16 @@ function Experience() {
                 <h3 className={styles.languagesHeading}>Coding Languages</h3>
                 <ul className={styles.languagesList}>
                     <li>C/C++ ★★★★★</li>
-                    <li>HTML/JS/CSS ★★★★☆</li>
-                    <li>Node ★★★★☆</li>
-                    <li>React ★★★☆☆</li>
+                    <li>HTML/JS/CSS ★★★★★</li>
+                    <li>React ★★★★★</li>
+                    <li>Node ★★☆☆☆</li>
+                    <li>SQL ★☆☆☆☆</li>
+                    <li>Express ★☆☆☆☆</li>
+                    <li>MongoDB ★☆☆☆☆</li>
                     <li>Java ★★★☆☆</li>
-                    <li>Python ★★★★☆</li>
-                    <li>Golang/Lisp/Prolog ★★☆☆☆</li>
+                    <li>Python ★★☆☆☆</li>
+                    <li>Golang/Lisp/Prolog ★☆☆☆☆</li>
+
                 </ul>
             </div>
         </section>

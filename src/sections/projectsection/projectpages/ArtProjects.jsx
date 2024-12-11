@@ -4,12 +4,13 @@ import styles from './ArtProjectsStyles.module.css';
 import FigmaPortfolio from "../../../assets/FigmaPortfolio.png";
 import InstagramBorder_1 from "../../../assets/InstagramBorder_1.png";
 import dragon from "../../../assets/dragon.png";
+import APOFigma from "../../../assets/APOFigma.png";
 
 const projects = [
     {
         title: "Jacket Embroidery",
         image: dragon,
-        description: "Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter",
+        description: "Made a Jacket Embroidery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter",
     },
     {
         title: "Instagram Border",
@@ -17,9 +18,16 @@ const projects = [
         description: "Designed the Alpha Phi Omega S2K23 Iota Phi Chapter Instagram Border",
     },
     {
-        title: "Figma Personal Website",
+        title: "Personal Website",
         image: FigmaPortfolio,
         description: "Designed my Personal Website on Figma",
+        link: "https://www.figma.com/design/gqrZKVqgyIMfkrCCtCfNKP/Personal-Portfolio?node-id=0-1&t=jgF9WtkhYAK1DvcZ-1",
+    },
+    {
+        title: "APO Website",
+        image: APOFigma,
+        description: "Designed the Alpha Phi Omega, iota phi chapter, website",
+        link: "https://www.figma.com/design/mi0tPgq45ifYJ2iDBpKJGz/APO-iotaphi-Web?t=jgF9WtkhYAK1DvcZ-1",
     }
 ];
 
@@ -58,7 +66,20 @@ function ArtProjects() {
                             ) : null}
                             <p className={styles.description}>{project.description}</p>
                         </div>
-                        <h2 className={styles.projectTitle}>{project.title}</h2>
+                        <h2 className={styles.projectTitle}>
+                            {project.title}
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.linkArrow}
+                                    aria-label={`Go to ${project.title}`}
+                                >
+                                    ➡
+                                </a>
+                            )}
+                        </h2>
                     </div>
                 ))}
             </div>

@@ -35,9 +35,9 @@ function About() {
 
             {/* Section 1 */}
             <div className={styles.AboutMe_01}>
-                <p className={styles.AboutTextContainer}>
+                <div className={styles.AboutTextContainer}>
                     {isMobileView ? (
-                        <>
+                        <p>
                             <img className={styles.MobileImage} src={Education} alt="graduating cow" />
                             <h2 className={styles.BoldColoredText}> Education </h2>
                             <p className={styles.MobileText}>
@@ -45,9 +45,9 @@ function About() {
                                 <br />
                                 B.S. in Computer Science
                             </p>
-                        </>
+                        </p>
                     ) : (
-                        <>
+                        <p>
                             I graduated from <span className={styles.BoldColoredText}> UC Davis </span>
                             with a bachelor’s degree in <span className={styles.BoldColoredText}> Computer Science</span>.
                             <br />
@@ -55,9 +55,9 @@ function About() {
                             while my coding skills enable me to turn those ideas into reality. I enjoy <br />
                             designing websites, creating games, and developing software, combining my <br />
                             passion for both art and technology.
-                        </>
+                        </p>
                     )}
-                </p>
+                </div>
                 {!isMobileView && (
                     <img className={styles.UCDavisPic} src={UCD} alt="Cow with UC DAVIS on it" />
                 )}
@@ -68,9 +68,9 @@ function About() {
                 {!isMobileView && (
                     <img className={styles.ArtandTechPic} src={ArtandTech} alt="Art and Tech in a picture" />
                 )}
-                <p className={styles.AboutTextContainer}>
+                <div className={styles.AboutTextContainer}>
                     {isMobileView ? (
-                        <>
+                        <p>
                             <img className={styles.MobileImage} src={Education} alt="graduating cow" />
                             <h2 className={styles.BoldColoredText}> Passion </h2>
                             <p className={styles.MobileText}>
@@ -78,9 +78,9 @@ function About() {
                                 <br />
                                 Creativity
                             </p>
-                        </>
+                        </p>
                     ) : (
-                        <>
+                        <p>
                             I’m passionate about blending <span className={styles.BoldColoredText}> art and technology </span>
                             to create unique <br />
                             and innovative solutions. Whether it’s through design or code, I <br />
@@ -88,16 +88,16 @@ function About() {
                             always striving to push <br />
                             boundaries and transform concepts from sketches into fully <br />
                             realized products.
-                        </>
+                        </p>
                     )}
-                </p>
+                </div>
             </div>
 
             {/* Section 3 */}
             <div className={styles.AboutMe_03}>
-                <p className={styles.AboutTextContainer}>
+                <div className={styles.AboutTextContainer}>
                     {isMobileView ? (
-                        <>
+                        <p>
                             <img className={styles.MobileImage} src={Education} alt="graduating cow" />
                             <h2 className={styles.BoldColoredText}> Coding Languages </h2>
                             <p className={styles.MobileText}>
@@ -105,17 +105,17 @@ function About() {
                                 <br />
                                 Java, Python, HTML/JS/CSS
                             </p>
-                        </>
+                        </p>
                     ) : (
-                        <>
+                        <p>
                             My primary programming language is <span className={styles.BoldColoredText}> C++</span>,
                             followed by Java, C, and Python. <br />
                             I also have experience with HTML, JavaScript, CSS, Node.js, React.js, <br />
                             and more. I am proficient in using various IDEs, including Visual <br />
                             Studio Code and Eclipse.
-                        </>
+                        </p>
                     )}
-                </p>
+                </div>
                 {!isMobileView && (
                     <img className={styles.LanguagePic} src={Language} alt="Coding language" />
                 )}

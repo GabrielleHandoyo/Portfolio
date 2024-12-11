@@ -54,6 +54,7 @@
 
 /* General Reset */
 * { 
+  cursor: default;
   font-synthesis: none;
   margin: 0;
   padding: 0;

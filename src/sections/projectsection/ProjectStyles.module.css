@@ -16,10 +16,10 @@
 }
 
 /* Subheading */
-.Projects p {
-    margin-top: 10px;
-    margin-bottom: 30px;
+.subheading {
+    margin: 10px 30px 30px; /* top, left/right, bottom */
 }
+
 
 /* Container for project cards */
 .ProjectContainer {
@@ -33,7 +33,7 @@
 /* Individual project card */
 .ProjectCard {
     width: 25vw;
-    min-width: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
     width: 25vw;
     min-width: 500px;
-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .ProjectImages:hover {
@@ -72,7 +72,7 @@ transition: transform 0.3s ease;
 
 /* Project description */
 .ProjectCard p {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
 /* Button styling */
@@ -100,12 +100,16 @@ transition: transform 0.3s ease;
     .textAlign {
         margin-left: 0;
     }
+
 }
 
 
 @media (max-width: 768px) {
     .textAlign {
         text-align: center;
+    }
+    .textAlign p{
+        margin: 0px 40px;
     }
 
 

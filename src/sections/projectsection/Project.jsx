@@ -13,30 +13,14 @@ function Project() {
             <h3 className={styles.heading}>Projects</h3>
 
 
-            <p>
+            <p className={styles.subheading}>
                 Bellow are some projects that I have made. <br />
                 View more project under that section to check out more projects that I have made!
             </p>
 
+
+
             <div className={styles.ProjectContainer}>
-
-                <div className={styles.ProjectCard}>
-                    <a href="https://www.instagram.com/p/CnvKpqRuwcq/"></a>
-                    <img className={styles.ProjectImages} src={dragon} alt="Dragon Drawing" />
-
-
-                    <div className={styles.textAlign}>
-                        <h3>Dragon Design</h3>
-                        <p>
-                            Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter
-                        </p>
-
-                        <Link to="/art-projects">
-                            <button className={styles.ProjectButton}>View More Art Projects →</button>
-                        </Link>
-                    </div>
-
-                </div>
 
                 <div className={styles.ProjectCard}>
                     <a href="https://jpsingh10.github.io/ECS162-p2/arcade/index.html"></a>
@@ -57,6 +41,26 @@ function Project() {
                     </div>
 
                 </div>
+
+
+                <div className={styles.ProjectCard}>
+                    <a href="https://www.instagram.com/p/CnvKpqRuwcq/"></a>
+                    <img className={styles.ProjectImages} src={dragon} alt="Dragon Drawing" />
+
+
+                    <div className={styles.textAlign}>
+                        <h3>Dragon Design</h3>
+                        <p>
+                            Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter
+                        </p>
+
+                        <Link to="/art-projects">
+                            <button className={styles.ProjectButton}>View More Art Projects →</button>
+                        </Link>
+                    </div>
+
+                </div>
+
 
                 <div className={styles.ProjectCard}>
                     <a href="https://youtu.be/JHHs3b37fTQ?si=Js0fgC44MqE6tmlC"></a>
