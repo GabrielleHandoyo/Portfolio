@@ -1,118 +1,207 @@
-
 /* Main container for the project section */
 .Projects {
-    text-align: center;
-    padding: 20px;
-        
-    min-height: 100vh; /* Ensures the section takes at least the full screen height */
-    justify-content: center; /* Center content vertically if it's smaller than the viewport */
-    box-sizing: border-box; /* Ensures padding is included in the height */
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box; /* Ensures padding is included in the height */
 }
 
-
 .heading {
-    font-size: 70px;
-    color: var(--title-color);
+  font-size: 70px;
+  color: var(--title-color);
 }
 
 /* Subheading */
 .subheading {
-    margin: 10px 30px 30px; /* top, left/right, bottom */
+  margin: 10px auto 40px;
+  font-size: 22px;
+  max-width: 800px;
 }
 
-
-/* Container for project cards */
-.ProjectContainer {
-    display: flex;
-    flex-wrap: wrap;
-    margin:  3vw 0vw;
-    justify-content: center; /* Centers items horizontally */ 
-    gap: 5vw;
+/* Container for category cards */
+.CategoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3vw 0;
+  justify-content: center; /* Centers items horizontally */
+  gap: 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Individual project card */
-.ProjectCard {
-    width: 25vw;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
-    box-sizing: border-box;
+/* Individual category card */
+.CategoryCard {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--boxed-color);
+  border: 4px solid var(--border-color);
+  border-radius: 15px;
+  padding: 30px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  /* Added to ensure consistent heights */
+  height: 550px;
+  position: relative;
 }
 
-.ProjectImages {
-    width: 90%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    object-fit: cover; /* Ensures the image fills the container and is cropped */
-    border: 3px solid #d4d4d4; /* Adjust color and width */
-    border-radius: 10px; /* Optional: adds rounded corners */
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
-    width: 25vw;
-    min-width: 500px;
-    transition: transform 0.3s ease;
+.CategoryCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.ProjectImages:hover {
-    transform: scale(1.1); /* Scales the image to 110% on hover */
+/* Category icons with rounded shape */
+.CategoryIconCS,
+.CategoryIconArt,
+.CategoryIconOther {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 50%; /* Make container perfectly round */
+  overflow: hidden; /* Ensures content stays within the rounded shape */
+  border: 3px solid var(--border-color); /* Optional: adds a border around the circle */
 }
+
+.CategoryIconCS img,
+.CategoryIconArt img,
+.CategoryIconOther img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%; /* Make the image round too */
+}
+
 .textAlign {
-    text-align: left;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 175px); /* Height minus icon space */
 }
 
-
-/* Project title */
-.ProjectCard h3 {
-    color: #ffa500;
-    font-size: 40px;
-    margin: 10px 0;
-
+/* Category title */
+.CategoryCard h3 {
+  color: var(--title-color);
+  font-size: 35px;
+  margin: 10px 0 15px;
 }
 
-/* Project description */
-.ProjectCard p {
-    margin-bottom: 20px;
+/* Category description */
+.CategoryCard p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 18px;
+  flex-grow: 1; /* Allows the description to take up available space */
 }
 
 /* Button styling */
-.ProjectButton {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 25px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.CategoryButton {
+  padding: 12px 0; /* Reduce horizontal padding to prevent text wrapping */
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px; /* Slightly smaller font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+  /* Position at bottom of card */
+  margin-top: auto;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Add ellipsis for any overflow */
 }
 
-.ProjectButton:hover {
-    background-color: #003ad8;
+.CategoryButton:hover {
+  background-color: #003ad8;
+  transform: scale(1.05);
 }
 
-@media (max-width: 1000px) {
-    .ProjectImages {
-        max-width: 50vw;
-        min-width: 300px;
-        
-    }
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  .CategoryContainer {
+    /* Ensure proper spacing between cards on large screens */
+    justify-content: space-around;
+  }
 
-    .textAlign {
-        margin-left: 0;
-    }
-
+  .CategoryCard {
+    min-width: 350px;
+    flex-basis: 30%; /* More control over sizing */
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .CategoryCard {
+    flex-basis: 45%; /* Allow two cards per row on medium screens */
+    min-width: 320px;
+    height: 500px; /* Slightly smaller height for medium screens */
+  }
 
-@media (max-width: 768px) {
-    .textAlign {
-        text-align: center;
-    }
-    .textAlign p{
-        margin: 0px 40px;
-    }
-
-
+  .CategoryButton {
+    font-size: 15px; /* Even smaller text on medium screens */
+  }
 }
 
+@media (max-width: 767px) {
+  .heading {
+    font-size: 50px;
+  }
 
+  .subheading {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .CategoryCard {
+    padding: 25px 20px;
+    min-width: 280px;
+    max-width: 100%;
+    width: 90%;
+    height: auto; /* Auto height for mobile */
+    min-height: 450px; /* Minimum height on mobile */
+  }
+
+  .CategoryIconCS,
+  .CategoryIconArt,
+  .CategoryIconOther {
+    width: 120px;
+    height: 120px;
+  }
+
+  .CategoryIconCS img,
+  .CategoryIconArt img,
+  .CategoryIconOther img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .CategoryCard h3 {
+    font-size: 30px;
+  }
+
+  .CategoryCard p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .textAlign {
+    text-align: center;
+  }
+
+  .textAlign p {
+    margin: 0 15px 20px;
+  }
+
+  .CategoryButton {
+    margin-top: 0; /* Reset auto margin on mobile */
+    max-width: 220px; /* Make buttons slightly narrower on mobile */
+  }
+}

@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./CSProjectsStyles.module.css";
-import rabbit from "../../../assets/RunRabbitRun.png";
-import PortfolioImage from "../../../assets/PortfolioImage.png";
-import APOapppic from "../../../assets/APOapppic.png";
+import rabbit from "../../../assets/projectThumbnail/RunRabbitRun.png";
+import PortfolioImage from "../../../assets/projectThumbnail/PortfolioImage.png";
+import APOapppic from "../../../assets/projectThumbnail/APOapppic.png";
+import isekaiQuiz from "../../../assets/projectThumbnail/isekaiquiz.png";
 
 const projects = [
+    {
+        title: "Isekai Quiz",
+        tech: "React, Flask",
+        context: "Build a quiz app which uses MBTI inspiered algorithm to figure out peoples character",
+        githubLink: "https://github.com/GabrielleHandoyo/IsekaiQuiz",
+        projectLink: "https://isekaiquiz.com/",
+        image: isekaiQuiz,
+    },
     {
         title: "Kids Arcade",
         tech: "HTML, JS, CSS",
@@ -19,7 +28,7 @@ const projects = [
         tech: "HTML, JS, CSS, React.js",
         context: "Built My own Personal Website",
         githubLink: "https://github.com/GabrielleHandoyo/Portfolio",
-        projectLink: "https://gabriellehandoyo.netlify.app",
+        projectLink: "https://gabriellehandoyo.com",
         image: PortfolioImage,
     },
     {
@@ -56,13 +65,35 @@ export default function CSProjects() {
             <div className={styles.projectsGrid}>
                 {projects.map((project, index) => (
                     <div key={index} className={styles.projectCard}>
-                        <div className={styles.imagePlaceholder}>
-                            <img
-                                src={project.image}
-                                alt={`${project.title} preview`}
-                                className={styles.projectImage}
-                            />
-                            <div className={styles.buttonContainer}>
+                        <a 
+                            href={project.projectLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.imageLink}
+                        >
+                            <div className={styles.imagePlaceholder}>
+                                <img
+                                    src={project.image}
+                                    alt={`${project.title} preview`}
+                                    className={styles.projectImage}
+                                />
+                            </div>
+                        </a>
+                        <div className={styles.projectInfo}>
+                            <a 
+                                href={project.projectLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.titleLink}
+                            >
+                                <h2 className={styles.projectTitle}>
+                                    {project.title} || {project.tech}
+                                </h2>
+                            </a>
+                            <p className={styles.projectContext}>
+                                {project.context}
+                            </p>
+                            <div className={styles.projectLinks}>
                                 <a
                                     href={project.githubLink}
                                     target="_blank"
@@ -71,23 +102,7 @@ export default function CSProjects() {
                                 >
                                     GitHub
                                 </a>
-                                <a
-                                    href={project.projectLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.button}
-                                >
-                                    View Project
-                                </a>
                             </div>
-                        </div>
-                        <div className={styles.projectInfo}>
-                            <h2 className={styles.projectTitle}>
-                                {project.title} || {project.tech}
-                            </h2>
-                            <p className={styles.projectContext}>
-                                {project.context}
-                            </p>
                         </div>
                     </div>
                 ))}

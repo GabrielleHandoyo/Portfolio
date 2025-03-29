@@ -1,6 +1,4 @@
 .homesection {
-      
-  min-height: 100vh; /* Ensures the section takes at least the full screen height */
   justify-content: center; /* Center content vertically if it's smaller than the viewport */
   box-sizing: border-box; /* Ensures padding is included in the height */
 }
@@ -24,8 +22,6 @@
   background-color: #555;
 }
 
-
-
 /* Base Styles for Desktop */
 /* .Navbar {
     width: 100%;
@@ -34,43 +30,41 @@
     display: flex;
     flex-direction: row;
   } */
-  .Navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* Adjust padding as needed */
-    background-color: var(--navbar-color);
-    height: 60px; /* Adjust height as needed */
-    font-family: 'Just Another Hand';
-    font-size: 30px;
-    width: 100%; /* Ensures navbar stretches across full width */
-    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Adjust padding as needed */
+  background-color: var(--navbar-color);
+  height: 60px; /* Adjust height as needed */
+  font-family: "Just Another Hand";
+  font-size: 30px;
+  width: 100%; /* Ensures navbar stretches across full width */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
 
-  }
-  
-  .Navbar h3 {
-    margin: 0;
-    color: var(--portfolio-color);
-    font-size: 40px;
-  }
-  
-  .list {
-    display: flex;
-    gap: 20px; /* Space between links */
-  }
-  
-  .list a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-  }
+.Navbar h3 {
+  margin: 0;
+  color: var(--portfolio-color);
+  font-size: 40px;
+}
 
-  .list a:hover {
-    color: var(--portfolio-color); /* Change link color on hover */
-  }
+.list {
+  display: flex;
+  gap: 20px; /* Space between links */
+}
 
+.list a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
 
-  /* Media query for mobile devices */
+.list a:hover {
+  color: var(--portfolio-color); /* Change link color on hover */
+}
+
+/* Media query for mobile devices */
 @media (max-width: 550px) {
   .Navbar {
     justify-content: center;
@@ -86,11 +80,6 @@
     font-size: 25px;
   }
 }
-
-
-
-
-
 
 .ThemeChanger {
   position: absolute;
@@ -115,9 +104,6 @@
   margin-top: 70px;
   transition: opacity 0.3s ease-in-out; /* Smooth transition for hiding */
 }
-
-
-
 
 /* Container for main content */
 .MainContent {
@@ -161,8 +147,6 @@
   height: auto;
   margin-top: 2vh;
   margin-bottom: 3vh;
-  
-  
 }
 
 .downloadButton {
@@ -183,7 +167,8 @@
     margin-top: 15vh;
   }
 
-  .FirstName, .LastName {
+  .FirstName,
+  .LastName {
     font-size: 80px;
     padding-left: 0vw;
   }
@@ -194,8 +179,9 @@
     text-align: center;
   }
 
-  .TextContent, .ImageContent {
-    text-align: center; 
+  .TextContent,
+  .ImageContent {
+    text-align: center;
     padding-left: 0px;
   }
 
@@ -210,9 +196,3 @@
     margin-bottom: 150px;
   }
 }
-
-
-
-
-
-

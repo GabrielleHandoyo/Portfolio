@@ -1,98 +1,78 @@
-import React from 'react'
+import React from 'react';
 import styles from "./ProjectStyles.module.css";
-import dragon from "../../assets/dragon.png";
-import rabbit from "../../assets/RunRabbitRun.png";
-import valorant from "../../assets/ValTumbnail.png";
-
 import { Link } from 'react-router-dom';
+import codingIcon from "../../assets/projecticons/coding-icon.png"; // You'll need to add these icons
+import artIcon from "../../assets/projecticons/art-icon.png";
+import otherIcon from "../../assets/projecticons/other-icon.png";
 
 function Project() {
     return (
         <section id="project" className={styles.Projects}>
 
-            <h3 className={styles.heading}>Projects</h3>
-
+            <h3 className={styles.heading}>Areas of Expertise</h3>
 
             <p className={styles.subheading}>
-                Bellow are some projects that I have made. <br />
-                View more project under that section to check out more projects that I have made!
+                I enjoy creating across multiple disciplines, from coding to design.
+                Explore each section to see my diverse portfolio of work.
             </p>
 
+            <div className={styles.CategoryContainer}>
 
-
-            <div className={styles.ProjectContainer}>
-
-                <div className={styles.ProjectCard}>
-                    <a href="https://jpsingh10.github.io/ECS162-p2/arcade/index.html"></a>
-                    <img className={styles.ProjectImages} src={rabbit} alt="Rabbit Drawing" />
+                <div className={styles.CategoryCard}>
+                    <div className={styles.CategoryIconCS}>
+                        <img src={codingIcon} alt="Computer Science icon" />
+                    </div>
 
                     <div className={styles.textAlign}>
-
-                        <h3>Run Rabbit Run</h3>
+                        <h3>Computer Science</h3>
                         <p>
-                            Built a web arcade game for my school project with a partner
+                            Web development, game programming, and software engineering projects 
+                            using React, HTML/CSS/JS, and C++.
                         </p>
 
                         <Link to="/cs-projects">
-                            <button className={styles.ProjectButton}>View More CS Projects →</button>
+                            <button className={styles.CategoryButton}>View CS Projects →</button>
                         </Link>
-
-
                     </div>
-
                 </div>
 
-
-                <div className={styles.ProjectCard}>
-                    <a href="https://www.instagram.com/p/CnvKpqRuwcq/"></a>
-                    <img className={styles.ProjectImages} src={dragon} alt="Dragon Drawing" />
-
+                <div className={styles.CategoryCard}>
+                    <div className={styles.CategoryIconArt}>
+                        <img src={artIcon} alt="Art icon" />
+                    </div>
 
                     <div className={styles.textAlign}>
-                        <h3>Dragon Design</h3>
+                        <h3>Art & Design</h3>
                         <p>
-                            Made a Jacket Embrodery Design for the Alpha Phi Omega F2K22 Iota Phi Chapter
+                            Digital artwork, UI/UX designs, logos, and graphics created for 
+                            various organizations and personal projects.
                         </p>
 
                         <Link to="/art-projects">
-                            <button className={styles.ProjectButton}>View More Art Projects →</button>
+                            <button className={styles.CategoryButton}>View Art Projects →</button>
                         </Link>
                     </div>
-
                 </div>
 
-
-                <div className={styles.ProjectCard}>
-                    <a href="https://youtu.be/JHHs3b37fTQ?si=Js0fgC44MqE6tmlC"></a>
-                    <img className={styles.ProjectImages} src={valorant} alt="Valorant Thumbnail" />
+                <div className={styles.CategoryCard}>
+                    <div className={styles.CategoryIconOther}>
+                        <img src={otherIcon} alt="Other Skills icon" />
+                    </div>
 
                     <div className={styles.textAlign}>
-
-                        <h3>Valorant Montage</h3>
+                        <h3>Other Skills</h3>
                         <p>
-                            Wanted to capture moments in my valorant games, so I learned how to video edit
+                            Video editing, animations, and other creative projects that showcase
+                            my diverse skillset.
                         </p>
 
                         <Link to="/other-projects">
-                            <button className={styles.ProjectButton}>View More Other Projects →</button>
+                            <button className={styles.CategoryButton}>View Other Projects →</button>
                         </Link>
                     </div>
-
                 </div>
 
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
         </section>
     )
 }

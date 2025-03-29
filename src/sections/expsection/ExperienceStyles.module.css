@@ -1,83 +1,80 @@
 .experienceContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    padding: 40px;
-    gap: 20px;
-        
-    min-height: 100vh; /* Ensures the section takes at least the full screen height */
-    justify-content: center; /* Center content vertically if it's smaller than the viewport */
-    box-sizing: border-box; /* Ensures padding is included in the height */
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 40px;
+  gap: 20px;
+  justify-content: center; /* Center content vertically if it's smaller than the viewport */
+  box-sizing: border-box; /* Ensures padding is included in the height */
 }
 
 .heading {
-    font-size: 65px;
-    margin-bottom: 10px;
-    color: var(--title-color);
+  font-size: 65px;
+  margin-bottom: 10px;
+  color: var(--title-color);
 }
 
 .subheading {
-    text-align: center;
+  text-align: center;
 }
 
 .cardsContainer {
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    margin: 4vw;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  margin: 4vw;
 }
 
 /* Full-width on larger screens */
 @media (min-width: 1200px) {
-    .cardsContainer {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .cardsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Two-by-two layout on medium screens */
 @media (min-width: 768px) and (max-width: 1199px) {
-    .cardsContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 550px) {
-    .cardsContainer {
-        grid-template-columns: 1fr;
-    }
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
 
-    /* Hide individual cards */
-    .card {
-        display: none;
-    }
+  /* Hide individual cards */
+  .card {
+    display: none;
+  }
 
-    /* Show merged card */
-    .mergedCard {
-        display: block;
-        background: var(--boxed-color);
-        border: 4px solid var(--border-color); /* Customize the color */
-        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-        border-radius: 12px;
-        padding: 20px 100px;
-        text-align: center;
-    }
-}
-
-.card {
+  /* Show merged card */
+  .mergedCard {
+    display: block;
     background: var(--boxed-color);
     border: 4px solid var(--border-color); /* Customize the color */
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    padding: 20px;
+    padding: 20px 100px;
     text-align: center;
+  }
+}
+
+.card {
+  background: var(--boxed-color);
+  border: 4px solid var(--border-color); /* Customize the color */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
 }
 
 .cardTitle {
-    font-size: 40px;
-    color: #ffa500;
-    margin-bottom: 10px;
+  font-size: 40px;
+  color: #ffa500;
+  margin-bottom: 10px;
 }
 
 /* .cardDetails {
@@ -85,33 +82,33 @@
 } */
 
 .languagesContainer {
-    margin-top: 5px;
-    padding: 20px;
-    background: var(--boxed-color);
-    border: 4px solid var(--border-color); /* Customize the color */
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    width: 90%;
-    max-width: 700px;
-    text-align: center;
+  margin-top: 5px;
+  padding: 20px;
+  background: var(--boxed-color);
+  border: 4px solid var(--border-color); /* Customize the color */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
 }
 
 .languagesHeading {
-    font-size: 40px;
-    color: #ffa500;
-    margin-bottom: 20px;
+  font-size: 40px;
+  color: #ffa500;
+  margin-bottom: 20px;
 }
 
 .languagesList {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .languagesList li {
-    font-size: 1rem;
-    color: var(--text-color);
+  font-size: 1rem;
+  color: var(--text-color);
 }

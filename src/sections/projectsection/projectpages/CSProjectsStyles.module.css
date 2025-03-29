@@ -1,253 +1,311 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .container {
-    background-color: var(--background-color);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-    text-align: center;
-    box-sizing: border-box;
+  background-color: var(--background-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center aligns everything in .nav */
-    width: 100%;
-
-    margin-bottom: 20px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center aligns everything in .nav */
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.leftLink, .rightLink {
-    position: absolute;
-    top: 0;
+.leftLink,
+.rightLink {
+  position: absolute;
+  top: 0;
 }
 
 .leftLink {
-    left: 0;
+  left: 0;
 }
 
 .rightLink {
-    right: 0;
+  right: 0;
 }
 
 .navLink {
-    color: #FCB83B;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
+  color: #fcb83b;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
 }
+
 .navButton {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    font-family: 'Cursive', sans-serif;
-    text-decoration: none;
-    transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-family: "Cursive", sans-serif;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .arrow {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border: 2px solid var(--text-color);
-    border-radius: 50%;
-    margin: 10px;
-    padding-bottom: 2px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  margin: 10px;
+  padding-bottom: 2px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .text {
-    padding-top: 2px;
-    font-size: 40px;
-    font-family: 'Just Another Hand';
-    color: var(--project-color);
+  padding-top: 2px;
+  font-size: 40px;
+  font-family: "Just Another Hand";
+  color: var(--project-color);
 }
 
 .navButton:hover .arrow {
-    background-color: #7f8094; /* Background color on hover */
-    transform: scale(1.2); /* Slightly enlarge on hover */
+  background-color: #7f8094; /* Background color on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
 .navButton:hover {
-    color: #ffffff; /* Change text color on hover */
+  color: #ffffff; /* Change text color on hover */
 }
 
 .title {
-    font-size: 70px;
-    color: var(--projectTitle-color);
-    margin: 0;
+  font-size: 70px;
+  color: var(--projectTitle-color);
+  margin: 0;
 }
 
 .backButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--btn-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--btn-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
 }
 
 .backButton:hover {
-    background-color: #003ad8;
+  background-color: #003ad8;
 }
 
 /* Responsive Styles */
 @media (max-width: 750px) {
-
-    .title {
-        font-size: 50px;
-        margin-top: 50px;
-    }
-
+  .title {
+    font-size: 50px;
+    margin-top: 50px;
+  }
 }
 
-
-
-
 .projectsGrid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center; /* Center the projects in the grid */
 }
 
 .projectCard {
-    display: flex;
-    padding: 15px;
-    transition: transform 0.2s;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    align-items: flex-start; /* Align items to the top */
+  display: flex;
+  padding: 15px;
+  transition: transform 0.2s;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  align-items: flex-start; /* Align items to the top */
+  max-width: 1200px; /* Limit the maximum width */
+  width: 94%; /* Use percentage width */
 }
 
-.imagePlaceholder:hover .projectImage {
-    transform: scale(1.1);
+/* Styles for clickable images */
+.imageLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
 }
 
 .imagePlaceholder {
-    width: 20vw;
-    aspect-ratio: 16 / 9;
-    background-color: #d3d3d3;
-    border-radius: 5px;
-    margin-right: 20px;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    min-width: 400px;
+  width: 20vw;
+  aspect-ratio: 16 / 9;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 400px;
+  transition: transform 0.3s ease;
 }
 
+.imageLink:hover .imagePlaceholder {
+  transform: scale(1.05);
+}
 
 .projectImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageLink:hover .projectImage {
+  transform: scale(1.1);
 }
 
 .projectInfo {
-    color: white;
-    text-align: left;
-    flex: 1; /* Allows the text area to take up remaining space */
+  color: white;
+  text-align: left;
+  flex: 1; /* Allows the text area to take up remaining space */
+}
+
+/* Style for clickable title */
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.titleLink:hover {
+  transform: translateX(5px);
 }
 
 .projectTitle {
-    color: var(--projectHeading-color);
-    font-size: 35px;
-    font-weight: bold;
-    margin: 0;
+  color: var(--projectHeading-color);
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.titleLink:hover .projectTitle {
+  color: var(--btn-color);
 }
 
 .projectContext {
-    font-size: 25px;
-    margin-top: 5px;
-    overflow-wrap: break-word; /* Wraps long words or continuous text */
+  font-size: 25px;
+  margin-top: 5px;
+  overflow-wrap: break-word; /* Wraps long words or continuous text */
 }
 
-@media (max-width: 800px) {
-    .projectCard {
-        flex-direction: column;
-        align-items: flex-start;
-        align-items: center; /* Center align all elements within the project card */
-        text-align: center; /* Center text within the entire project card */
-        margin-left: 10px;
-        margin-right: 10px;
-        
-    }
-
-    .imagePlaceholder {
-        width: 80%;
-        aspect-ratio: 16 / 9;
-        border-radius: 5px;
-        margin-right: 0px;
-    
-    }
-
-    .projectTitle {
-        font-size: 4vw;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-
-    .projectContext {
-        font-size: 3vw;
-        text-align: center;
-
-    }
+.projectLinks {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: flex-start;
 }
-
 
 .button {
-    padding: 10px 20px;
-    font-size: 1.2rem; /* Increased font size */
-    color: white;
-    background-color: var(--btn-color);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    width: 80%;
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .button:hover {
-    background-color: #003ad8;
-}
-.buttonContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  background-color: #003ad8;
 }
 
-.imagePlaceholder:hover .buttonContainer {
-    opacity: 1; /* Reveal buttons only on image hover */
+@media (max-width: 800px) {
+  .projectCard {
+    flex-direction: column;
+    align-items: center; /* Center align all elements within the project card */
+    text-align: center; /* Center text within the entire project card */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0;
+    width: 90%;
+  }
+
+  .imagePlaceholder {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    margin-right: 0;
+    margin-bottom: 15px;
+    min-width: auto;
+  }
+
+  .projectInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titleLink {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .projectTitle {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .projectContext {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projectLinks {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .titleLink:hover {
+    transform: translateY(-3px);
+  }
+
+  .button {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectTitle {
+    font-size: 20px;
+  }
+
+  .projectContext {
+    font-size: 14px;
+  }
 }
